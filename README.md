@@ -1,4 +1,6 @@
-# Pipe-Stream Benchmark Written in TypeScript / Deno
+# Pipe-Stream Benchmark
+
+Pipe-Stream benchmark written in TypeScript and runs on Deno.
 
 ```shell
 deno run --allow-net benchmark.ts
