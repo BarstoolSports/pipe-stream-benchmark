@@ -2,8 +2,8 @@ import { URLGroups, URLGroup, BenchmarkResult } from './types.ts'
 
 async function benchmark(groups: URLGroups) {
   console.log('')
-  console.log('URL | PLATFORM | TTFB | TTD | SIZE (MB)')
-  console.log('--- | -------- | ---- | --- | ---------')
+  console.log('URL | PLATFORM | TTFB (MS) | TTD (MS) | SIZE (MB)')
+  console.log('--- | -------- | --------- | -------- | ---------')
 
   await benchmarkGroup(groups, 'small', 'ec2', 100)
   await benchmarkGroup(groups, 'small', 'cloudflare', 100)
