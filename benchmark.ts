@@ -38,9 +38,10 @@ async function benchmarkRequest(url: string): Promise<BenchmarkResult> {
   const res = await fetch(url, { cache: 'no-cache', keepalive: true })
   const ttfb = Date.now() - start
   const buffer = await res.arrayBuffer()
+  const ttd = Date.now() - start
   return {
     ttfb,
-    ttd: Date.now() - start,
+    ttd,
     bytes: buffer.byteLength
   }
 }
