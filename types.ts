@@ -1,7 +1,8 @@
 export interface URLGroup {
   ec2: string
   cloudflare: string
-  fastly: string
+  fastly_ts: string
+  fastly_swift: string
 }
 
 export type URLGroups = Record<'small' | 'large', URLGroup>
