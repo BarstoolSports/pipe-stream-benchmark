@@ -10,9 +10,11 @@ deno run --allow-net benchmark.ts
 
 URL | PLATFORM | TTFB (MS) | TTD (MS) | SIZE (MB)
 --- | -------- | --------- | -------- | ---------
-small | ec2 | 77.02 | 151.54 | 3.33
-small | cloudflare | 61.98 | 130.88 | 3.33
-small | fastly | 65.95 | 403.28 | 3.33
-large | ec2 | 87.8 | 1750.9 | 69.79
-large | cloudflare | 66.4 | 2101.6 | 69.79
-large | fastly | 57.1 | 7012.1 | 69.79
+small | ec2 | 113.38 | 197.09 | 3.33
+small | cloudflare | 55.89 | 145.99 | 3.33
+small | fastly_ts | 79.11 | 489.19 | 3.33
+small | fastly_swift | 47.64 | 98.8 | 3.33
+large | ec2 | 105.5 | 2125.9 | 69.79
+large | cloudflare | 59.1 | 1894.2 | 69.79
+large | fastly_ts | 65.5 | 8661.1 | 69.79
+large | fastly_swift | 76 | 1257.4 | 69.79
