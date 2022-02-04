@@ -1,7 +1,7 @@
 export interface URLGroup {
   ec2: string
   cloudflare: string
-  fastly_ts: string
+  fastly_js: string
   fastly_swift: string
 }
 
