@@ -43,6 +43,9 @@ async function benchmarkRequestAverage(url: string, count: number): Promise<Benc
 async function benchmarkRequest(url: string): Promise<BenchmarkResult> {
   const start = Date.now()
   const res = await fetch(url, { cache: 'no-cache', keepalive: true })
+  if (res.status >= 400) {
+    throw new Error(`Request error: ${res.status} ${res.statusText}`)
+  }
   const ttfb = Date.now() - start
   const buffer = await res.arrayBuffer()
   const ttd = Date.now() - start
